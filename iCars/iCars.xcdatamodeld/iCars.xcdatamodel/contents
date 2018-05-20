@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3401" systemVersion="13B42" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Car" representedClassName="Car" syncable="YES">
+        <attribute name="fuelTankCNG" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="fuelTankLPG" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="fuelTankMain" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="licenseTag" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="make" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="model" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="odometer" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="expenses" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Expense" inverseName="car" inverseEntity="Expense" syncable="YES"/>
+        <relationship name="insurances" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Insurance" inverseName="car" inverseEntity="Insurance" syncable="YES"/>
+        <relationship name="oilChanges" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="OilChange" inverseName="car" inverseEntity="OilChange" syncable="YES"/>
+        <relationship name="refuelings" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Refueling" inverseName="car" inverseEntity="Refueling" syncable="YES"/>
+        <relationship name="reminders" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Reminder" inverseName="car" inverseEntity="Reminder" syncable="YES"/>
+        <relationship name="services" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Service" inverseName="car" inverseEntity="Service" syncable="YES"/>
+    </entity>
+    <entity name="Expense" representedClassName="Expense" syncable="YES">
+        <attribute name="expenseDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="expenseDetails" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="expenseLocation" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="expenseTotalCost" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="expenseType" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="car" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Car" inverseName="expenses" inverseEntity="Car" syncable="YES"/>
+    </entity>
+    <entity name="Insurance" representedClassName="Insurance" syncable="YES">
+        <attribute name="insuranceCompany" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="insuranceDueDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="insuranceID" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="insuranceNotes" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="insurancePaymentDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="insuranceTotalCost" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="insuraneType" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="car" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Car" inverseName="insurances" inverseEntity="Car" syncable="YES"/>
+    </entity>
+    <entity name="OilChange" representedClassName="OilChange" syncable="YES">
+        <attribute name="odometer" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="oilChangeDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="oilChangeDetails" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="oilChangeTotalCost" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="oilNextChangeOdometer" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="car" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Car" inverseName="oilChanges" inverseEntity="Car" syncable="YES"/>
+    </entity>
+    <entity name="Refueling" representedClassName="Refueling" syncable="YES">
+        <attribute name="fuelPrice" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <attribute name="fuelType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fullTank" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="odometer" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="refuelingDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="refuelingGasStation" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="refuelingQantity" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <attribute name="refuelingTotalCost" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <relationship name="car" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Car" inverseName="refuelings" inverseEntity="Car" syncable="YES"/>
+    </entity>
+    <entity name="Reminder" representedClassName="Reminder" syncable="YES">
+        <attribute name="reminderDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="reminderDetails" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="reminderOdometer" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="reminderType" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="car" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Car" inverseName="reminders" inverseEntity="Car" syncable="YES"/>
+    </entity>
+    <entity name="Service" representedClassName="Service" syncable="YES">
+        <attribute name="odometer" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="serviceDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="serviceDetail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="serviceLocation" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="serviceTotalCost" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="serviceType" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="car" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Car" inverseName="services" inverseEntity="Car" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Car" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Expense" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Insurance" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="OilChange" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Refueling" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Reminder" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Service" positionX="0" positionY="0" width="0" height="0"/>
+    </elements>
+</model>

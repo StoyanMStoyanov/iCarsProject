@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MMNewReminderViewController">
+            <connections>
+                <outlet property="dateLabel" destination="TkY-k2-kxk" id="xi7-Ge-5el"/>
+                <outlet property="datePicker" destination="9Qv-b6-c1O" id="FUO-hM-Fwx"/>
+                <outlet property="detailsTextField" destination="lkZ-JA-tgb" id="i7p-4Q-1G0"/>
+                <outlet property="odometerTextField" destination="O9S-l4-fv6" id="57q-OD-6cB"/>
+                <outlet property="typeLabel" destination="Q6n-Xm-WF3" id="OkK-rr-A9Q"/>
+                <outlet property="typePickerView" destination="rK0-4u-BDU" id="wVQ-gB-tVA"/>
+                <outlet property="view" destination="1" id="uOl-Ul-Lcd"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q6n-Xm-WF3">
+                    <rect key="frame" x="20" y="20" width="82" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Type">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="typeButtonTapped:" destination="-1" eventType="touchUpInside" id="fKu-MP-1qU"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TkY-k2-kxk">
+                    <rect key="frame" x="218" y="20" width="82" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Date">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="dateButtonTapped:" destination="-1" eventType="touchUpInside" id="RNi-KY-ihH"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Odometer..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O9S-l4-fv6">
+                    <rect key="frame" x="110" y="20" width="100" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="100" id="Oar-rd-yxo"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <datePicker hidden="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="9Qv-b6-c1O">
+                    <rect key="frame" x="20" y="58" width="280" height="162"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="162" id="Riu-LS-RPE"/>
+                    </constraints>
+                    <date key="date" timeIntervalSinceReferenceDate="414535887.51238102">
+                        <!--2014-02-19 20:51:27 +0000-->
+                    </date>
+                    <timeZone key="timeZone" name="America/Los_Angeles">
+                        <mutableData key="data">
+VFppZgAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAC5AAAABAAAABCepkign7sVkKCGKqChmveQ
+y4kaoNIj9HDSYSYQ1v50INiArZDa/tGg28CQENzes6DdqayQ3r6VoN+JjpDgnneg4WlwkOJ+WaDjSVKQ
+5F47oOUpNJDmR1gg5xJREOgnOiDo8jMQ6gccIOrSFRDr5v4g7LH3EO3G4CDukdkQ76/8oPBxuxDxj96g
+8n/BkPNvwKD0X6OQ9U+ioPY/hZD3L4Sg+CiiEPkPZqD6CIQQ+viDIPvoZhD82GUg/chIEP64RyD/qCoQ
+AJgpIAGIDBACeAsgA3EokARhJ6AFUQqQBkEJoAcw7JAHjUOgCRDOkAmtvyAK8LCQC+CvoAzZzRANwJGg
+DrmvEA+priAQmZEQEYmQIBJ5cxATaXIgFFlVEBVJVCAWOTcQFyk2IBgiU5AZCRggGgI1kBryNKAb4heQ
+HNIWoB3B+ZAesfigH6HbkCB2KyAhgb2QIlYNICNq2hAkNe8gJUq8ECYV0SAnKp4QJ/7toCkKgBAp3s+g
+KupiECu+saAs036QLZ6ToC6zYJAvfnWgMJNCkDFnkiAycySQM0d0IDRTBpA1J1YgNjLokDcHOCA4HAUQ
+OOcaIDn75xA6xvwgO9vJEDywGKA9u6sQPo/6oD+bjRBAb9ygQYSpkEJPvqBDZIuQRC+goEVEbZBF89Mg
+Ry2KEEfTtSBJDWwQSbOXIErtThBLnLOgTNZqkE18laBOtkyQT1x3oFCWLpBRPFmgUnYQkFMcO6BUVfKQ
+VPwdoFY11JBW5TogWB7xEFjFHCBZ/tMQWqT+IFvetRBchOAgXb6XEF5kwiBfnnkQYE3eoGGHlZBiLcCg
+Y2d3kGQNoqBlR1mQZe2EoGcnO5BnzWagaQcdkGmtSKBq5v+Qa5ZlIGzQHBBtdkcgbq/+EG9WKSBwj+AQ
+cTYLIHJvwhBzFe0gdE+kEHT/CaB2OMCQdt7roHgYopB4vs2gefiEkHqer6B72GaQfH6RoH24SJB+XnOg
+f5gqkAABAAECAwEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
+AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
+AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
+AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
+</mutableData>
+                    </timeZone>
+                </datePicker>
+                <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rK0-4u-BDU">
+                    <rect key="frame" x="20" y="58" width="280" height="162"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="162" id="mBs-GW-Lst"/>
+                    </constraints>
+                </pickerView>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Details..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lkZ-JA-tgb">
+                    <rect key="frame" x="20" y="58" width="280" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="hBv-dN-DsZ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="O9S-l4-fv6" firstAttribute="leading" secondItem="Q6n-Xm-WF3" secondAttribute="trailing" constant="8" symbolic="YES" id="BWS-mR-4Vh"/>
+                <constraint firstItem="O9S-l4-fv6" firstAttribute="top" secondItem="1" secondAttribute="top" constant="20" symbolic="YES" id="HTQ-ZW-gq5"/>
+                <constraint firstItem="Q6n-Xm-WF3" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="20" symbolic="YES" id="IeO-I9-f5M"/>
+                <constraint firstItem="lkZ-JA-tgb" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="20" symbolic="YES" id="J9U-Tl-Vbl"/>
+                <constraint firstAttribute="centerX" secondItem="rK0-4u-BDU" secondAttribute="centerX" id="K25-Qi-Fnb"/>
+                <constraint firstAttribute="trailing" secondItem="9Qv-b6-c1O" secondAttribute="trailing" constant="20" symbolic="YES" id="L9C-pm-cjW"/>
+                <constraint firstItem="9Qv-b6-c1O" firstAttribute="top" secondItem="O9S-l4-fv6" secondAttribute="bottom" constant="8" symbolic="YES" id="NDh-GX-dqV"/>
+                <constraint firstAttribute="trailing" secondItem="TkY-k2-kxk" secondAttribute="trailing" constant="20" symbolic="YES" id="Oaj-xw-rMj"/>
+                <constraint firstItem="lkZ-JA-tgb" firstAttribute="top" secondItem="TkY-k2-kxk" secondAttribute="bottom" constant="8" symbolic="YES" id="Psk-zp-fZ5"/>
+                <constraint firstAttribute="trailing" secondItem="rK0-4u-BDU" secondAttribute="trailing" constant="20" symbolic="YES" id="QX5-iq-XRZ"/>
+                <constraint firstAttribute="centerX" secondItem="O9S-l4-fv6" secondAttribute="centerX" id="Qcc-bp-66l"/>
+                <constraint firstItem="rK0-4u-BDU" firstAttribute="top" secondItem="O9S-l4-fv6" secondAttribute="bottom" constant="8" symbolic="YES" id="SGZ-tQ-AoW"/>
+                <constraint firstItem="lkZ-JA-tgb" firstAttribute="top" secondItem="Q6n-Xm-WF3" secondAttribute="bottom" constant="8" symbolic="YES" id="XGJ-9i-3XE"/>
+                <constraint firstItem="Q6n-Xm-WF3" firstAttribute="top" secondItem="1" secondAttribute="top" constant="20" symbolic="YES" id="XTG-9d-gpX"/>
+                <constraint firstItem="rK0-4u-BDU" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="20" symbolic="YES" id="ZkL-lZ-BPV"/>
+                <constraint firstAttribute="trailing" secondItem="lkZ-JA-tgb" secondAttribute="trailing" constant="20" symbolic="YES" id="a6d-iF-7AP"/>
+                <constraint firstItem="9Qv-b6-c1O" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="20" symbolic="YES" id="amC-bM-BXy"/>
+                <constraint firstItem="lkZ-JA-tgb" firstAttribute="top" secondItem="O9S-l4-fv6" secondAttribute="bottom" constant="8" symbolic="YES" id="cUI-pc-kyi"/>
+                <constraint firstItem="TkY-k2-kxk" firstAttribute="leading" secondItem="O9S-l4-fv6" secondAttribute="trailing" constant="8" symbolic="YES" id="ep1-oW-aY0"/>
+                <constraint firstItem="TkY-k2-kxk" firstAttribute="top" secondItem="1" secondAttribute="top" constant="20" symbolic="YES" id="f8L-YY-Uwl"/>
+            </constraints>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+</document>
